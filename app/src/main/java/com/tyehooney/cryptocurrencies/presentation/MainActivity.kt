@@ -8,6 +8,7 @@ import androidx.compose.material.Surface
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.tyehooney.cryptocurrencies.common.Constants.PARAM_COIN_ID
 import com.tyehooney.cryptocurrencies.presentation.coin_detail.CoinDetailScreen
 import com.tyehooney.cryptocurrencies.presentation.coin_list.CoinListScreen
 import com.tyehooney.cryptocurrencies.presentation.ui.theme.CryptocurrencyAppYTTheme
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                             CoinListScreen(navController)
                         }
                         composable(
-                            route = Screen.CoinDetailScreen.route + "/{coinId}"
+                            route = Screen.CoinDetailScreen.route + "/{"+ PARAM_COIN_ID +"}"
                         ) {
                             CoinDetailScreen()
                         }

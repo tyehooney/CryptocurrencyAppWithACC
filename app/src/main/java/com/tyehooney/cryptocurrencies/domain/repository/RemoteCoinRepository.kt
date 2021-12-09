@@ -3,7 +3,7 @@ package com.tyehooney.cryptocurrencies.domain.repository
 import com.tyehooney.cryptocurrencies.data.remote.dto.CoinDetailDto
 import com.tyehooney.cryptocurrencies.data.remote.dto.CoinDto
 
-interface CoinRepository {
+interface RemoteCoinRepository {
 
     suspend fun getCoins(): List<CoinDto>
 

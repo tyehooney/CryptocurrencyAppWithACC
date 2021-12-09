@@ -1,14 +1,13 @@
-package com.tyehooney.cryptocurrencies.data.repository
+package com.tyehooney.cryptocurrencies.data.remote
 
-import com.tyehooney.cryptocurrencies.data.remote.CoinPaprikaApi
 import com.tyehooney.cryptocurrencies.data.remote.dto.CoinDetailDto
 import com.tyehooney.cryptocurrencies.data.remote.dto.CoinDto
-import com.tyehooney.cryptocurrencies.domain.repository.CoinRepository
+import com.tyehooney.cryptocurrencies.domain.repository.RemoteCoinRepository
 import javax.inject.Inject
 
-class CoinRepositoryImpl @Inject constructor(
+class RemoteCoinRepositoryImpl @Inject constructor(
     private val api: CoinPaprikaApi
-) : CoinRepository {
+) : RemoteCoinRepository {
 
     override suspend fun getCoins(): List<CoinDto> {
         return api.getCoins()
