@@ -1,0 +1,18 @@
+CREATE TABLE coinEntity (
+    id TEXT NOT NULL PRIMARY KEY,
+    isActive INTEGER NOT NULL,
+    isNew INTEGER NOT NULL,
+    name TEXT,
+    rank INTEGER,
+    symbol TEXT,
+    type TEXT
+);
+
+getCoins:
+SELECT *
+FROM coinEntity;
+
+saveCoin:
+INSERT OR REPLACE
+INTO coinEntity
+VALUES(?, ?, ?, ?, ?, ?, ?);
